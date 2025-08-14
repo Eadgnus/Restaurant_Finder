@@ -227,5 +227,6 @@ def search_restaurants():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
+    # Render 환경 변수에서 포트 번호를 가져오거나, 없다면 기본값 5000을 사용합니다.
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)

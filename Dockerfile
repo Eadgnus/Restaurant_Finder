@@ -8,12 +8,14 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # Playwright 실행에 필요한 시스템 종속성을 설치합니다.
-# 이 라이브러리들은 Render의 기본 환경에 포함되어 있지 않아 명시적으로 설치해야 합니다.
+# 패키지 이름 오류를 수정했습니다.
 RUN apt-get update && apt-get install -y \
     libgtk-4-1 \
     libgraphene-1.0-0 \
-    libgstgl-1.0-0 \
-    libgstcodecparsers-1.0-0 \
+    libgstreamer-plugins-bad1.0-0 \
+    libgstreamer-plugins-base1.0-0 \
+    libgstreamer1.0-0 \
+    libgstreamer-gl1.0-0 \
     libenchant-2-2 \
     libsecret-1-0 \
     libmanette-0.2-0 \

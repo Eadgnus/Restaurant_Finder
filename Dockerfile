@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y \
     libenchant-2-2 \
     libsecret-1-0 \
     libmanette-0.2-0 \
-    libgles2-mesa
+    libgles2
 
 # requirements.txt 파일을 복사하고 파이썬 라이브러리들을 설치합니다.
 # --no-cache-dir 옵션은 빌드 속도를 높입니다.

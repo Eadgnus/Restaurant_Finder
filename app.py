@@ -1,3 +1,25 @@
+# run_app.py
+import subprocess
+import os
+
+print("--- Playwright 브라우저 설치 시작 ---")
+try:
+    # 'playwright install' 명령어를 실행합니다.
+    # 이 명령어는 브라우저가 이미 설치되어 있으면 아무 작업도 하지 않습니다.
+    subprocess.run(["playwright", "install"], check=True)
+    print("--- Playwright 브라우저 설치 완료 ---")
+
+    # app.py 파일을 실행합니다.
+    print("--- app.py 실행 시작 ---")
+    os.system("python app.py")
+
+except subprocess.CalledProcessError as e:
+    print(f"Playwright 설치 중 오류 발생: {e}")
+except FileNotFoundError:
+    print("오류: 'playwright' 명령어를 찾을 수 없습니다. 'pip install playwright'를 먼저 실행했는지 확인하세요.")
+except Exception as e:
+    print(f"오류 발생: {e}")
+
 import sys
 import webbrowser
 import requests

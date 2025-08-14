@@ -1,6 +1,6 @@
 # Playwright가 공식적으로 지원하는 Python 이미지를 사용합니다.
-# 이 이미지에는 Python, Playwright, 그리고 필요한 모든 시스템 종속성이 미리 설치되어 있습니다.
-FROM mcr.microsoft.com/playwright/python:v1.44.0-jammy
+# requirements.txt의 playwright 버전과 동일한 이미지 버전을 사용하도록 변경합니다.
+FROM mcr.microsoft.com/playwright/python:v1.54.0-jammy
 
 # Python의 표준 스트림이 버퍼링되지 않도록 환경 변수를 설정합니다.
 ENV PYTHONUNBUFFERED=1

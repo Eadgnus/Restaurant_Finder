@@ -1,0 +1,8 @@
+dist/
+build/
+__pycache__/
+App.jsx
+get.py
+main.py
+main.spec
+.env

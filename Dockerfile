@@ -18,4 +18,4 @@ COPY . .
 
 # 컨테이너가 시작될 때 실행될 명령어를 정의합니다.
 # Gunicorn을 사용하여 Flask 앱을 실행하고, Render가 제공하는 PORT 환경 변수를 사용합니다.
-CMD gunicorn app:app --bind 0.0.0.0:$PORT
+CMD gunicorn app:app --workers 9 --threads 4 --bind 0.0.0.0:$PORT --timeout 120
